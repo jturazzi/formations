@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Parcours de formation informatique</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#FFFFFF;--ink:#13222B;--muted:#435660;--line:#DCE4E9;--accent:#0B6E79;--accent-soft:#E6F3F5;--navy:#1B4B7A;--navy-soft:#E8EFF7;--surface-2:#F3F6F8}
+*{box-sizing:border-box}html{color-scheme:light}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.06rem/1.65 "IBM Plex Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+header{padding:1.2rem 0}
+.brand{display:flex;align-items:center;gap:.7rem;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.05rem}
+.brand i{width:2.2rem;height:2.2rem;border-radius:11px;background:var(--accent);color:#fff;display:grid;place-items:center;font-style:normal;font-size:.8rem}
+.hero{padding:3.2rem 0 2.2rem;max-width:44rem}
+.hero h1{font-size:clamp(2.1rem,6vw,3.5rem);line-height:1.06;font-weight:700}
+.hero p{color:var(--muted);font-size:1.15rem;margin:1.1rem 0 0;max-width:36rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:1.4rem;padding-bottom:3rem}
+.card{--c:var(--accent);--cs:var(--accent-soft);position:relative;display:flex;flex-direction:column;border:1px solid var(--line);border-radius:24px;overflow:hidden;text-decoration:none;background:#fff;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card.cy{--c:var(--navy);--cs:var(--navy-soft)}
+.card:hover{transform:translateY(-4px);border-color:var(--c);box-shadow:0 18px 40px rgba(19,34,43,.12)}
+.card:focus-visible{outline:3px solid var(--c);outline-offset:3px}
+.art{background:var(--cs);height:11.5rem;display:grid;place-items:center;position:relative;overflow:hidden}
+.art svg{width:min(78%,19rem);height:auto}
+.body{padding:1.5rem 1.6rem 1.7rem;display:flex;flex-direction:column;gap:.9rem;flex:1}
+.tag{align-self:flex-start;font-size:.85rem;font-weight:600;color:var(--c);background:var(--cs);padding:.15rem .8rem;border-radius:99px}
+.card h2{font-size:1.75rem;line-height:1.15;font-weight:700}
+.card p{margin:0;color:var(--muted)}
+.card ul{margin:.2rem 0 0;padding:0;list-style:none;display:grid;gap:.45rem}
+.card li{display:flex;gap:.6rem;font-size:.98rem}
+.card li::before{content:"";flex:none;width:.5rem;height:.5rem;border-radius:99px;background:var(--c);margin-top:.62rem}
+.go{margin-top:auto;padding-top:.8rem}
+.btn{display:inline-flex;align-items:center;gap:.6rem;background:var(--c);color:#fff;font-weight:600;border-radius:12px;padding:.75rem 1.3rem;transition:gap .2s}
+.card:hover .btn{gap:.95rem}
+.btn svg{width:18px;height:18px}
+.note{border-top:1px solid var(--line);padding:1.6rem 0 2.2rem;color:var(--muted);font-size:.93rem}
+.note p{margin:0 0 .3rem}.note .cr{color:var(--ink);font-weight:600}
+.tagrow{display:flex;align-items:center;justify-content:space-between;gap:.8rem;flex-wrap:wrap}
+.tagrow .tag{align-self:auto}
+.prog{display:inline-flex;align-items:center;gap:.6rem;font-size:.88rem;font-weight:600;color:var(--c);font-variant-numeric:tabular-nums}
+.prog[hidden]{display:none}
+.prog i{display:block;width:5.5rem;height:6px;border-radius:99px;background:var(--cs);overflow:hidden}
+.prog i b{display:block;height:100%;background:var(--c);border-radius:99px}
+@media (prefers-reduced-motion:reduce){.card,.btn{transition:none}}
+.rise{animation:rise .7s ease-out both}.rise.d2{animation-delay:.12s}.rise.d3{animation-delay:.24s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.rise{animation:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><div class="brand"><i aria-hidden="true">PF</i>Parcours de formation informatique</div></div></header>
+<main class="wrap">
+  <section class="hero">
+    <h1>Parcours de formation informatique</h1>
+    <p class="rise d2">Choisissez votre parcours. Deux formations en ligne pour les équipes, à suivre à votre rythme, dans l’ordre ou partie par partie.</p>
+  </section>
+  <div class="grid">
+    <a class="card rise d2" href="ia">
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 320 170" fill="none">
+          <rect x="22" y="22" width="170" height="76" rx="18" fill="#fff" stroke="#0B6E79" stroke-width="3"/>
+          <path d="M60 98 L48 122 L84 98" fill="#fff" stroke="#0B6E79" stroke-width="3" stroke-linejoin="round"/>
+          <rect x="44" y="44" width="96" height="9" rx="4.5" fill="#BFE3E7"/><rect x="44" y="64" width="124" height="9" rx="4.5" fill="#BFE3E7"/>
+          <rect x="150" y="82" width="148" height="68" rx="18" fill="#0B6E79"/>
+          <path d="M270 150 L282 168 L248 150" fill="#0B6E79"/>
+          <circle cx="188" cy="116" r="8" fill="#fff"/><circle cx="224" cy="116" r="8" fill="#fff" opacity=".7"/><circle cx="260" cy="116" r="8" fill="#fff" opacity=".4"/>
+          <path d="M250 26 l5 13 13 5 -13 5 -5 13 -5 -13 -13 -5 13 -5z" fill="#0B6E79"/>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="tagrow"><span class="tag">10 parties</span><span class="prog" id="p-ia" hidden></span></div>
+        <h2>L’IA au travail</h2>
+        <p>Comprendre ce que l’intelligence artificielle peut faire pour vous, bien la questionner et rester en sécurité.</p>
+        <ul><li>Écrire de bonnes demandes à un assistant</li><li>Protéger les données des personnes accompagnées</li><li>Repérer les limites et les erreurs</li></ul>
+        <div class="go"><span class="btn">Ouvrir la formation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+    </a>
+    <a class="card cy rise d3" href="cyber">
+      <div class="art" aria-hidden="true">
+        <svg viewBox="0 0 320 170" fill="none">
+          <path d="M160 14 L222 38 V82 C222 118 196 144 160 158 C124 144 98 118 98 82 V38 Z" fill="#fff" stroke="#1B4B7A" stroke-width="3.5" stroke-linejoin="round"/>
+          <path d="M160 30 L208 48 V82 C208 110 188 130 160 142 Z" fill="#E8EFF7"/>
+          <rect x="140" y="76" width="40" height="34" rx="6" fill="#1B4B7A"/>
+          <path d="M148 76 v-9 a12 12 0 0 1 24 0 v9" stroke="#1B4B7A" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="160" cy="92" r="4.5" fill="#fff"/><rect x="158" y="93" width="4" height="9" rx="2" fill="#fff"/>
+          <circle cx="58" cy="52" r="17" fill="#fff" stroke="#1B4B7A" stroke-width="3"/><path d="M50 52 l6 6 l11 -12" stroke="#1B4B7A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="248" y="104" width="52" height="36" rx="6" fill="#fff" stroke="#1B4B7A" stroke-width="3"/><path d="M250 108 l24 18 l24 -18" stroke="#1B4B7A" stroke-width="3" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="body">
+        <div class="tagrow"><span class="tag">11 parties</span><span class="prog" id="p-cy" hidden></span></div>
+        <h2>La cybersécurité au travail</h2>
+        <p>Reconnaître les arnaques, protéger comptes et appareils, et savoir réagir vite en cas d’incident.</p>
+        <ul><li>Repérer un faux mail ou un faux site</li><li>Choisir des mots de passe solides</li><li>Connaître vos obligations et qui prévenir</li></ul>
+        <div class="go"><span class="btn">Ouvrir la formation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </div>
+    </a>
+  </div>
+</main>
+<footer><div class="wrap"><div class="note">
+  <p class="cr">Crédits : Jérémy TURAZZI</p>
+  <p>Un outil d’intelligence artificielle a aidé au développement de ces parcours.</p>
+  <p>Version du 01/10/2026</p>
+</div></div></footer>
+<script>
+(function(){
+  function p(id,key,total){
+    var el=document.getElementById(id);if(!el)return;
+    var n=0;try{var r=JSON.parse(localStorage.getItem(key)||'{}');for(var k in r)if(r[k])n++}catch(e){}
+    if(!n)return;n=Math.min(n,total);
+    el.innerHTML=n+' / '+total+' lues<i aria-hidden="true"><b style="width:'+Math.round(n/total*100)+'%"></b></i>';el.hidden=false;
+  }
+  p('p-ia','ia-social-lu',10);p('p-cy','cyber-lu',11);
+})();
+</script>
+</body>
+</html>

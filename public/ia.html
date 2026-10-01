@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>IA au travail</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style id="tw">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:IBM Plex Sans,system-ui,-apple-system,Segoe UI,sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.visible{visibility:visible}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.right-0{right:0}.z-20{z-index:20}.mx-auto{margin-left:auto;margin-right:auto}.mb-2{margin-bottom:.5rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.table{display:table}.grid{display:grid}.hidden{display:none}.w-72{width:18rem}.min-w-0{min-width:0}.max-w-6xl{max-width:72rem}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-10{gap:2.5rem}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.gap-4{gap:1rem}.rounded-lg{border-radius:.5rem}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-line{border-color:var(--line)}.p-2{padding:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.pb-12{padding-bottom:3rem}.pt-6{padding-top:1.5rem}.font-display{font-family:Bricolage Grotesque,Segoe UI,system-ui,sans-serif}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.font-bold{font-weight:700}.font-semibold{font-weight:600}.text-ink{color:var(--ink)}.text-muted{color:var(--muted)}.underline{text-decoration-line:underline}.shadow-lg{--tw-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -4px rgba(0,0,0,.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color),0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.blur{--tw-blur:blur(8px);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}@media (min-width:640px){.sm\:pt-10{padding-top:2.5rem}}@media (min-width:1024px){.lg\:block{display:block}.lg\:hidden{display:none}.lg\:grid-cols-\[240px_minmax\(0\2c 1fr\)\]{grid-template-columns:240px minmax(0,1fr)}}@media (max-width:520px){.hdl{gap:.5rem}.hdl>a.font-display{font-size:0;gap:0}.hdl>a.font-display .logo{font-size:.85rem;margin:0}.chiph{font-size:.8rem;padding:.2rem .6rem}}
+</style>
+<style>
+/* Mise en page : en-tête fixe, colonne de sommaire collante à gauche, onze parties numérotées en colonne de lecture. Page blanche, accent bleu-vert, alertes en ambre et rouge. */
+:root{
+  --bg:#FFFFFF; --surface:#FFFFFF; --surface-2:#F3F6F8; --ink:#13222B; --muted:#435660; --line:#DCE4E9;
+  --accent:#0B6E79; --accent-ink:#FFFFFF; --accent-soft:#E6F3F5;
+  --good:#1B7A43; --good-soft:#DCF0E3; --warn:#8F5400; --warn-soft:#FAEBCF; --bad:#B42318; --bad-soft:#FBE0DD;
+}
+html{scroll-behavior:smooth;font-size:18px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;line-height:1.7}
+h1,h2,h3,h4{font-family:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;line-height:1.15;text-wrap:balance}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:4px}
+.sec{scroll-margin-top:5rem;border-top:1px solid var(--line);padding-block:3.5rem}
+.kicker{font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.h2{font-size:clamp(1.9rem,4vw,2.5rem);letter-spacing:-.02em;font-weight:700;margin-top:.6rem}
+.h3{font-size:1.4rem;font-weight:700;letter-spacing:-.01em;margin-top:3rem}
+.lead{font-size:1.2rem;line-height:1.6;max-width:46rem;margin-top:1.4rem}
+.txt{max-width:46rem;margin-top:1rem}
+.muted{color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1.25rem}
+.card h4{font-size:1.15rem;font-weight:700}
+.card p{margin-top:.4rem;font-size:.95rem}
+.card ul{margin-top:.6rem;padding-left:1.2rem;list-style:disc;font-size:.95rem;display:flex;flex-direction:column;gap:.3rem}
+.cards{display:grid;gap:1rem;margin-top:1.5rem;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.cards.c2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.pill{display:inline-block;font-size:.8rem;font-weight:600;padding:.1rem .7rem;border-radius:99px}
+.pill-g{background:var(--good-soft);color:var(--good)} .pill-o{background:var(--warn-soft);color:var(--warn)} .pill-r{background:var(--bad-soft);color:var(--bad)} .pill-a{background:var(--accent-soft);color:var(--accent)}
+.note{background:var(--accent-soft);border-radius:12px;padding:1.1rem 1.3rem;max-width:46rem;margin-top:1.5rem;font-size:1.02rem}
+.note-w{background:var(--warn-soft)}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:12px;margin-top:1.5rem}
+.tbl table{width:100%;min-width:560px;border-collapse:collapse;font-size:.95rem;line-height:1.55}
+.tbl th{background:var(--surface-2);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:.75rem 1rem}
+.tbl td{padding:.8rem 1rem;border-top:1px solid var(--line);vertical-align:top;text-align:left}
+.tl{border-left:2px solid var(--line);margin:1.5rem 0 0 .5rem;display:flex;flex-direction:column;gap:1.1rem;padding-left:0;list-style:none;max-width:46rem}
+.tl li{position:relative;padding-left:1.4rem}
+.tl li::before{content:"";position:absolute;left:-.45rem;top:.55rem;width:.8rem;height:.8rem;border-radius:99px;background:var(--accent);border:2px solid var(--bg)}
+.tl li.late::before{background:var(--warn)}
+.tl b.t{display:block;color:var(--accent);font-size:.95rem}
+.ticks{list-style:none;padding:0;margin-top:1.2rem;display:flex;flex-direction:column;gap:.7rem;max-width:46rem}
+.ticks li{position:relative;padding-left:1.7rem}
+.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--good);font-weight:700}
+.dots{list-style:disc;padding-left:1.3rem;margin-top:1rem;display:flex;flex-direction:column;gap:.5rem;max-width:46rem}
+.prompt{position:relative;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:1rem 1rem 1rem 1.1rem}
+.prompt pre{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.6}
+.prompt h4{font-size:1.05rem;font-weight:700;margin-bottom:.6rem}
+.copy{margin-top:.8rem;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:.35rem .9rem;font-size:.9rem;font-weight:600;cursor:pointer}
+.copy:hover{border-color:var(--accent);color:var(--accent)}
+details.qa{border:1px solid var(--line);border-radius:12px;background:var(--surface);max-width:46rem;margin-top:.8rem}
+details.qa summary{cursor:pointer;padding:1rem 1.2rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+details.qa summary::-webkit-details-marker{display:none}
+details.qa summary::after{content:"+";color:var(--accent);font-size:1.3rem;line-height:1}
+details.qa[open] summary::after{content:"−"}
+details.qa .ans{padding:0 1.2rem 1.1rem;font-size:.98rem}
+details.qa .ans p+p{margin-top:.6rem}
+.sidenav a{display:block;padding:.4rem .7rem;border-radius:8px;font-size:.92rem;line-height:1.35;color:var(--muted)}
+.sidenav a:hover{background:var(--surface-2);color:var(--ink)}
+.sidenav a[aria-current="true"]{background:var(--accent-soft);color:var(--accent);font-weight:600}
+dl.gl{max-width:46rem;margin-top:1.5rem;display:flex;flex-direction:column;gap:1rem}
+dl.gl dt{font-weight:700;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:1.1rem}
+dl.gl dd{margin:0;color:var(--muted);font-size:.98rem}
+
+#rp{position:fixed;left:0;top:env(safe-area-inset-top,0px);height:4px;width:0;background:var(--accent);z-index:30;transition:width .1s linear}
+.stats{display:grid;gap:1px;margin-top:2.5rem;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.stats div{background:var(--surface);padding:1rem 1.2rem}
+.stats b{display:block;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:2rem;line-height:1.1;color:var(--accent);font-variant-numeric:tabular-nums}
+.stats span{font-size:.9rem;color:var(--muted)}
+.card{transition:border-color .15s,box-shadow .15s}
+.card:hover{border-color:var(--accent);box-shadow:0 2px 10px rgba(11,110,121,.08)}
+.pager{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-top:3rem;max-width:46rem}
+.pager a{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:12px;padding:.8rem 1.1rem;min-width:200px;flex:1 1 200px}
+.pager a:hover{border-color:var(--accent)}
+.pager small{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.pager b{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:1.1rem;color:var(--accent)}
+.pager .nx{text-align:right;margin-left:auto}
+#top{position:fixed;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));z-index:25;width:46px;height:46px;border-radius:99px;border:1px solid var(--line);background:var(--surface);box-shadow:0 2px 10px rgba(0,0,0,.12);font-size:1.3rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}
+#top.on{opacity:1;pointer-events:auto}
+#top:hover{border-color:var(--accent);color:var(--accent)}
+.sec>.kicker::before{content:"";display:inline-block;width:1.6rem;height:2px;background:var(--accent);vertical-align:middle;margin-right:.6rem}
+
+.key{display:inline-block;background:var(--accent-soft);color:var(--accent);font-weight:600;padding:.35rem .9rem;border-radius:99px;margin-top:1rem;font-size:.95rem;max-width:100%}
+.readbtn{margin-top:2.5rem;display:inline-flex;align-items:center;gap:.6rem;border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:.7rem 1.2rem;font-weight:600;cursor:pointer}
+.readbtn:hover{border-color:var(--accent)}
+.readbtn .box{width:1.3rem;height:1.3rem;border:2px solid var(--muted);border-radius:6px;display:grid;place-items:center;font-size:.85rem;line-height:1}
+.readbtn[aria-pressed="true"]{border-color:var(--good);background:var(--good-soft);color:var(--good)}
+.readbtn[aria-pressed="true"] .box{background:var(--good);border-color:var(--good);color:#fff}
+.readbtn[aria-pressed="true"] .box::after{content:"✓"}
+.sidenav a.read::after{content:" ✓";color:var(--good);font-weight:700}
+.prof{display:block;height:100%}
+.prof b{font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:1.15rem;display:block}
+.prof span{display:block;margin-top:.3rem;font-size:.92rem;color:var(--muted)}
+.prof em{display:block;margin-top:.6rem;font-style:normal;font-size:.85rem;font-weight:600;color:var(--accent)}
+.chk{display:grid;gap:1.2rem;margin-top:1.5rem;grid-template-columns:minmax(0,1fr);max-width:46rem}
+.chk .list{display:flex;flex-wrap:wrap;gap:.5rem}
+.chk .list button{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:.45rem 1rem;font-size:.95rem;cursor:pointer;text-align:left}
+.chk .list button:hover{border-color:var(--accent)}
+.chk .list button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.chk .res{border:1px solid var(--line);border-radius:14px;padding:1.2rem;min-height:7rem;background:var(--surface-2)}
+
+:root{--accent-mid:#BFE3E7}
+.sec{position:relative}
+.secnum{position:absolute;right:0;top:2.6rem;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-weight:700;font-size:clamp(4.5rem,9vw,7.5rem);line-height:1;color:var(--accent);opacity:.09;pointer-events:none;user-select:none}
+#programme .secnum{top:0}
+@media (max-width:760px){.secnum{display:none}}
+.hero{position:relative;overflow:hidden;border-radius:28px;border:1px solid var(--line);padding:clamp(1.4rem,5vw,3.5rem);background:radial-gradient(circle at 92% 6%,#CDEAEE 0,rgba(205,234,238,0) 46%),linear-gradient(180deg,#F0F8F9,#FFFFFF)}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(11,110,121,.2) 1px,transparent 1px);background-size:20px 20px;-webkit-mask-image:linear-gradient(115deg,transparent 45%,#000);mask-image:linear-gradient(115deg,transparent 45%,#000);pointer-events:none}
+.hero-in{position:relative;max-width:44rem}
+.hero h1{font-size:clamp(2.2rem,4.8vw,3.7rem);letter-spacing:-.03em;line-height:1.04;font-weight:700;margin-top:1rem}
+.hl{background:linear-gradient(transparent 64%,rgba(11,110,121,.24) 64%);padding-inline:.1em;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hero-art{display:none;position:absolute;right:2.5rem;top:50%;transform:translateY(-50%);width:min(330px,30vw);height:auto}
+@media (min-width:1080px){.hero-art{display:block}.hero-in{max-width:40rem}}
+.cta{display:inline-block;border-radius:12px;padding:.85rem 1.6rem;font-weight:600;box-shadow:0 6px 16px rgba(11,110,121,.28);transition:transform .15s}
+.cta:hover{transform:translateY(-2px)}
+.cta2{display:inline-block;border-radius:12px;border:1px solid var(--line);background:var(--surface);padding:.85rem 1.6rem;font-weight:600}
+.cta2:hover{border-color:var(--accent);color:var(--accent)}
+.logo{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:9px;background:var(--accent);color:#fff;font-size:.8rem;font-weight:700;letter-spacing:.02em;margin-right:.6rem;vertical-align:middle}
+.card{border-radius:16px;box-shadow:0 1px 2px rgba(19,34,43,.05),0 4px 14px rgba(19,34,43,.03)}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(11,110,121,.1)}
+.ico{display:grid;place-items:center;width:46px;height:46px;border-radius:13px;background:var(--accent-soft);color:var(--accent);margin-bottom:.9rem}
+.ico svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tbl{border-radius:16px;box-shadow:0 1px 2px rgba(19,34,43,.04)}
+.tbl tr:nth-child(even) td{background:#FAFCFD}
+.tbl td:first-child{font-weight:500}
+.note{border-radius:16px}
+aside .sidenav{border:1px solid var(--line);border-radius:18px;padding:.9rem;background:var(--surface);box-shadow:0 1px 2px rgba(19,34,43,.04)}
+.sidenav a{border-radius:10px}
+.prompt{border-radius:16px;background:linear-gradient(180deg,#F7FAFB,#F1F5F7)}
+.prompt pre{font-size:.9rem}
+details.qa{border-radius:14px;box-shadow:0 1px 2px rgba(19,34,43,.04)}
+details.qa[open]{border-color:var(--accent)}
+.stats{border-radius:16px;box-shadow:0 4px 14px rgba(19,34,43,.05)}
+.pager a{border-radius:14px;background:var(--surface)}
+footer{background:#13222B!important;border-top:0!important;margin-top:3.5rem}
+footer p{color:#B7C7CF!important}
+footer p.font-semibold{color:#fff!important;font-size:1.05rem}
+.h3{position:relative}
+
+.note{position:relative;padding-left:3.6rem}
+.note::before{content:"i";position:absolute;left:1.1rem;top:1.05rem;width:1.7rem;height:1.7rem;border-radius:50%;background:var(--accent);color:#fff;display:grid;place-items:center;font-weight:700;font-family:'Bricolage Grotesque',system-ui,sans-serif;font-size:1rem;line-height:1}
+.note.note-w::before{content:"!";background:var(--warn)}
+.card:has(.pill-g){background:#F5FBF7}
+.card:has(.pill-o){background:#FFFAF0}
+.card:has(.pill-r){background:#FFF6F4}
+.card:has(.pill-a){background:#F3FAFB}
+.chiph{font-size:.85rem;font-weight:600;color:var(--accent);background:var(--accent-soft);padding:.3rem .9rem;border-radius:99px;white-space:nowrap}
+.trust{display:flex;flex-wrap:wrap;gap:.5rem 1.4rem;margin-top:1.6rem;font-size:.92rem;color:var(--muted)}
+.trust span{display:inline-flex;align-items:center;gap:.45rem}
+.trust span::before{content:"✓";display:inline-grid;place-items:center;width:1.2rem;height:1.2rem;border-radius:50%;background:var(--good-soft);color:var(--good);font-size:.75rem;font-weight:700}
+article.card .ico{margin-bottom:.7rem}
+@media print{#rp,#top,header{display:none}}
+
+.back{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--line);border-radius:99px;padding:.3rem .8rem;font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap;transition:color .2s,border-color .2s,background .2s}
+.back:hover{color:var(--accent);border-color:var(--accent);background:var(--accent-soft)}
+.back:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.back svg{width:15px;height:15px;flex:none}
+.hdl{display:flex;align-items:center;gap:.9rem;min-width:0}
+@media (max-width:520px){.back .bl{display:none}.back{padding:.35rem .55rem}}
+</style>
+
+<div id="rp" aria-hidden="true"></div>
+<header class="sticky z-20 border-b border-line" style="top:env(safe-area-inset-top,0px);background:var(--bg)">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+    <div class="hdl"><a class="back" href="./" aria-label="Retour aux parcours"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span class="bl">Tous les parcours</span></a><a href="#haut" class="font-display text-lg font-bold"><span class="logo" aria-hidden="true">IA</span>Parcours IA</a></div>
+    <div class="flex items-center gap-3"><span class="chiph"><span id="readh">0/10</span> lues</span><details class="relative lg:hidden">
+      <summary class="cursor-pointer rounded-lg border border-line px-3 py-1 text-sm font-semibold" style="list-style:none">Sommaire</summary>
+      <nav class="sidenav absolute right-0 mt-2 w-72 rounded-xl border border-line p-2 shadow-lg" style="background:var(--surface)" aria-label="Sommaire mobile">
+        <a href="#programme">1. Programme</a><a href="#comprendre">2. Comprendre l’IA</a><a href="#limites">3. Forces et limites</a><a href="#demander">4. Bien demander</a><a href="#donnees">5. Données et confidentialité</a><a href="#cadre">6. Cadre juridique et éthique</a><a href="#usages">7. Cas d’usage</a><a href="#situations">8. Mises en situation</a><a href="#retenir">9. À retenir</a><a href="#ressources">10. Glossaire, FAQ, ressources</a>
+      </nav>
+    </details></div>
+  </div>
+</header>
+
+<div id="haut" class="mx-auto max-w-6xl px-4">
+
+<section class="pb-12 pt-6 sm:pt-10">
+<div class="hero">
+  <svg class="hero-art" viewBox="0 0 320 320" aria-hidden="true" focusable="false">
+    <circle cx="160" cy="165" r="150" fill="var(--accent-mid)" opacity=".55"/>
+    <rect x="30" y="56" width="180" height="100" rx="22" fill="#fff" stroke="var(--accent)" stroke-width="3"/>
+    <path d="M72 155 L64 186 L104 155" fill="#fff" stroke="var(--accent)" stroke-width="3" stroke-linejoin="round"/>
+    <line x1="74" y1="155" x2="102" y2="155" stroke="#fff" stroke-width="6"/>
+    <rect x="52" y="78" width="120" height="10" rx="5" fill="var(--accent)" opacity=".85"/>
+    <rect x="52" y="100" width="136" height="10" rx="5" fill="var(--accent)" opacity=".3"/>
+    <rect x="52" y="122" width="88" height="10" rx="5" fill="var(--accent)" opacity=".3"/>
+    <rect x="100" y="176" width="180" height="86" rx="22" fill="var(--accent)"/>
+    <path d="M240 261 L252 292 L214 261 Z" fill="var(--accent)"/>
+    <rect x="124" y="198" width="116" height="9" rx="4.5" fill="#fff" opacity=".92"/>
+    <rect x="124" y="218" width="84" height="9" rx="4.5" fill="#fff" opacity=".6"/>
+    <rect x="124" y="238" width="104" height="9" rx="4.5" fill="#fff" opacity=".6"/>
+    <path d="M255 34 L297 49 V90 C297 118 278 137 255 148 C232 137 213 118 213 90 V49 Z" fill="#fff" stroke="var(--good)" stroke-width="3"/>
+    <path d="M236 90 l13 13 l25 -28" stroke="var(--good)" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <div class="hero-in">
+  <p class="kicker">Formation · secteur social</p>
+  <h1 class="font-display">Utiliser l’IA au travail, <span class="hl">sans mettre les personnes accompagnées en risque</span></h1>
+  <p class="lead muted">Une formation complète pour les équipes du secteur social : comprendre l’IA, savoir la demander, connaître les règles sur les données et repérer les bons usages. À suivre dans l’ordre ou partie par partie, à votre rythme.</p>
+  <div class="stats">
+    <div><b>10</b><span>parties à suivre</span></div>
+    <div><b id="readn">0/10</b><span>parties lues</span></div>
+    <div><b>8</b><span>demandes prêtes à copier</span></div>
+    <div><b>7</b><span>mises en situation</span></div>
+  </div>
+  <div class="mt-8 flex flex-wrap gap-3">
+    <a href="#programme" class="cta" style="background:var(--accent);color:var(--accent-ink)">Commencer la formation</a>
+    <a href="#demander" class="cta2">Aller aux demandes prêtes à copier</a>
+  </div>
+  <div class="trust"><span>Sans compte ni inscription</span><span>Progression gardée sur votre appareil</span><span>Demandes prêtes à copier</span></div>
+  </div>
+</div>
+</section>
+
+<div class="grid gap-10 lg:grid-cols-[240px_minmax(0,1fr)]">
+<aside class="hidden lg:block">
+  <nav class="sidenav sticky" style="top:5rem" aria-label="Sommaire">
+    <p class="kicker mb-2 px-3">Sommaire</p>
+    <a href="#programme">1. Programme</a>
+    <a href="#comprendre">2. Comprendre l’IA</a>
+    <a href="#limites">3. Forces et limites</a>
+    <a href="#demander">4. Bien demander</a>
+    <a href="#donnees">5. Données et confidentialité</a>
+    <a href="#cadre">6. Cadre juridique et éthique</a>
+    <a href="#usages">7. Cas d’usage</a>
+    <a href="#situations">8. Mises en situation</a>
+    <a href="#retenir">9. À retenir</a>
+    <a href="#ressources">10. Glossaire, FAQ, ressources</a>
+  </nav>
+</aside>
+
+<main class="min-w-0">
+
+<!-- 1 -->
+<section id="programme" class="sec" style="border-top:0;padding-top:0">
+  <p class="kicker">Partie 1</p>
+  <h2 class="h2">Programme et objectifs</h2>
+  <p class="lead">Cette formation s’adresse à toute personne du secteur social : éducateurs, moniteurs-éducateurs, accompagnants éducatifs et sociaux, assistants de service social, conseillers en insertion, secrétariat, cadres et direction. Aucune connaissance préalable n’est nécessaire.</p>
+  <h3 class="h3" style="margin-top:2rem">À l’issue de la formation, vous saurez</h3>
+  <ul class="ticks">
+    <li>expliquer simplement ce qu’est une IA générative et comment elle produit ses réponses ;</li>
+    <li>repérer ce qu’elle fait bien, ce qu’elle fait mal et quand elle se trompe ;</li>
+    <li>rédiger une demande efficace et vérifier le résultat avant de le diffuser ;</li>
+    <li>reconnaître les informations que vous ne saisissez jamais dans un outil d’IA ;</li>
+    <li>situer le cadre : RGPD, secret professionnel, droits des usagers, AI Act ;</li>
+    <li>choisir vos premiers usages et les tester en sécurité.</li>
+  </ul>
+  <h3 class="h3">Par où commencer ?</h3>
+  <p class="txt muted">Toutes les parties sont utiles. Voici les plus utiles selon votre fonction.</p>
+  <div class="cards">
+    <a class="card prof" href="#demander"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><b>Équipes éducatives</b><span>Adapter un texte, préparer un atelier, rester dans les règles sur les données.</span><em>Parties 4, 5, 8</em></a>
+    <a class="card prof" href="#usages"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><b>Accompagnement social</b><span>Expliquer une démarche, préparer un entretien, vérifier droits et montants.</span><em>Parties 3, 5, 7</em></a>
+    <a class="card prof" href="#demander"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><b>Secrétariat et accueil</b><span>Courriers, comptes rendus, planning, chatbot d’accueil.</span><em>Parties 4, 5, 7</em></a>
+    <a class="card prof" href="#cadre"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><b>Direction et encadrement</b><span>Cadre juridique, droits des usagers, règles sur les données, réflexes à retenir.</span><em>Parties 5, 6, 9</em></a>
+  </div>
+  <h3 class="h3">Le programme</h3>
+  <div class="tbl">
+    <table>
+      <tr><th>Partie</th><th>Contenu</th></tr>
+      <tr><td><b>2. Comprendre l’IA</b></td><td>Définitions, fonctionnement, idées reçues, enjeux du secteur.</td></tr>
+      <tr><td><b>3. Forces et limites</b></td><td>Fiabilité par tâche, hallucinations, biais, quand ne pas l’utiliser.</td></tr>
+      <tr><td><b>4. Bien demander</b></td><td>Méthode en cinq éléments, techniques, huit demandes prêtes à copier.</td></tr>
+      <tr><td><b>5. Données et confidentialité</b></td><td>Ce qui ne se saisit pas, anonymiser, que faire en cas d’erreur.</td></tr>
+      <tr><td><b>6. Cadre juridique et éthique</b></td><td>RGPD, secret professionnel, droits des usagers, AI Act, principes éthiques.</td></tr>
+      <tr><td><b>7. Cas d’usage</b></td><td>Six fonctions, exemples, et ce qu’on ne fait pas.</td></tr>
+      <tr><td><b>8. Mises en situation</b></td><td>Sept situations de terrain avec la bonne pratique.</td></tr>
+      <tr><td><b>9. À retenir</b></td><td>Réflexes et plan d’action personnel.</td></tr>
+      <tr><td><b>10. Glossaire, FAQ, ressources</b></td><td>Définitions, questions fréquentes, liens officiels.</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- 2 -->
+<section id="comprendre" class="sec">
+  <p class="kicker">Partie 2</p>
+  <h2 class="h2">Comprendre l’IA</h2>
+  <p class="lead">Une intelligence artificielle est un système qui produit des prédictions, des recommandations ou des contenus à partir de données, sans que chaque règle ait été écrite à la main.</p>
+  <p class="txt muted">Vous en utilisez déjà : le correcteur orthographique, la traduction automatique, la dictée vocale, les suggestions d’un site, le filtre anti-spam de votre messagerie. Ces outils ont appris à partir d’exemples.</p>
+
+  <h3 class="h3">Trois familles à distinguer</h3>
+  <div class="cards">
+    <div class="card"><h4>Logiciel à règles</h4><p>Applique des règles écrites à l’avance, par exemple un simulateur de droits. Le résultat est prévisible et vérifiable. Ce n’est pas de l’IA au sens strict.</p></div>
+    <div class="card"><h4>IA prédictive</h4><p>Classe ou estime à partir de données passées : détection d’anomalies, tri de demandes, score. Elle est utile et sensible, car elle agit sur des personnes.</p></div>
+    <div class="card"><h4>IA générative</h4><p>Crée du texte, des images, du son ou du code. Claude, ChatGPT, Copilot, Gemini ou Le Chat en font partie. C’est l’objet principal de cette formation.</p></div>
+  </div>
+
+  <h3 class="h3">Comment répond un assistant d’IA générative</h3>
+  <p class="txt">C’est un modèle de langage. Il a été entraîné sur une très grande quantité de textes pour prédire la suite la plus plausible d’une phrase. Il ne consulte pas une base de faits : il écrit un texte vraisemblable.</p>
+  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+    <div class="card"><span class="pill pill-a">1</span><h4 class="mt-2">Entraînement</h4><p>Lecture de milliards de textes. Le modèle retient des régularités de langage et de connaissances.</p></div>
+    <div class="card"><span class="pill pill-a">2</span><h4 class="mt-2">Votre demande</h4><p>Elle est découpée en « tokens », des morceaux de mots. C’est tout ce que l’outil connaît de votre situation.</p></div>
+    <div class="card"><span class="pill pill-a">3</span><h4 class="mt-2">Génération</h4><p>L’outil écrit morceau par morceau, en choisissant à chaque fois une suite vraisemblable.</p></div>
+    <div class="card"><span class="pill pill-a">4</span><h4 class="mt-2">Votre relecture</h4><p>Vous jugez, corrigez et relancez. La responsabilité finale vous revient.</p></div>
+  </div>
+  <ul class="dots">
+    <li><b>Le contexte est sa mémoire de travail.</b> Il ne connaît de votre structure et des personnes accompagnées que ce que vous écrivez ou joignez.</li>
+    <li><b>Ses connaissances ont une date.</b> Un barème, une loi ou une procédure peut avoir changé depuis.</li>
+    <li><b>Deux demandes identiques donnent deux réponses différentes.</b> La génération comporte une part de hasard.</li>
+    <li><b>Il n’a ni jugement professionnel ni éthique.</b> Il aide à écrire et à préparer, il ne décide pas.</li>
+  </ul>
+  <div class="note note-w"><b>Offre grand public ou offre d’entreprise.</b> Les conditions d’usage des données saisies varient selon l’offre. Lisez-les ou interrogez votre direction avant tout usage professionnel.</div>
+
+  <h3 class="h3">Quatre idées reçues</h3>
+  <div class="cards c2">
+    <div class="card"><h4>« L’IA comprend ce que je lui dis »</h4><p>Elle repère des régularités dans les mots. Elle n’a ni expérience, ni compréhension d’une situation humaine.</p></div>
+    <div class="card"><h4>« L’IA est neutre »</h4><p>Elle reproduit les déséquilibres des textes sur lesquels elle a appris, y compris les stéréotypes sur la pauvreté, le handicap ou l’origine.</p></div>
+    <div class="card"><h4>« C’est bien écrit, donc c’est vrai »</h4><p>La qualité de la langue n’est pas une preuve d’exactitude. Les erreurs sont écrites avec la même assurance.</p></div>
+    <div class="card"><h4>« L’IA va remplacer les travailleurs sociaux »</h4><p>Elle prend en charge certaines tâches d’écriture. La relation, le discernement et la décision restent humains.</p></div>
+  </div>
+
+  <h3 class="h3">Ce que cela change dans le secteur social</h3>
+  <p class="txt">Le temps administratif pèse sur l’accompagnement. L’IA peut en alléger une partie : adapter un document, préparer une trame, mettre en forme un compte rendu général. Le gain n’a de sens que s’il est rendu à la relation avec les personnes.</p>
+  <p class="txt">Trois risques sont propres au secteur : fragiliser la confiance si des informations intimes sortent de la structure, standardiser ou discriminer si un outil classe des personnes, et accroître l’écart avec les personnes éloignées du numérique.</p>
+</section>
+
+<!-- 3 -->
+<section id="limites" class="sec">
+  <p class="kicker">Partie 3</p>
+  <h2 class="h2">Forces et limites</h2>
+  <p class="lead">L’IA générative est très bonne pour produire un premier jet. Elle est moins fiable dès qu’il s’agit de faits précis. Connaître cette frontière évite la plupart des erreurs.</p>
+  <div class="tbl">
+    <table>
+      <tr><th>Tâche</th><th>Fiabilité</th><th>Conseil</th></tr>
+      <tr><td>Reformuler, corriger, changer de ton</td><td><span class="pill pill-g">Élevée</span></td><td>Relisez le sens, pas seulement la forme.</td></tr>
+      <tr><td>Adapter un texte en langage simple</td><td><span class="pill pill-g">Élevée</span></td><td>Faites relire par des personnes concernées.</td></tr>
+      <tr><td>Idées d’activités, plans, variantes</td><td><span class="pill pill-g">Élevée</span></td><td>Demandez plusieurs pistes, gardez la meilleure.</td></tr>
+      <tr><td>Résumer un texte public que vous fournissez</td><td><span class="pill pill-o">Moyenne</span></td><td>Vérifiez noms, chiffres et dates.</td></tr>
+      <tr><td>Calculs, tableaux de chiffres</td><td><span class="pill pill-o">Moyenne</span></td><td>Refaites le calcul dans un tableur.</td></tr>
+      <tr><td>Droits, montants d’aides, barèmes, délais</td><td><span class="pill pill-r">Faible</span></td><td>Contrôlez sur le site officiel, avec la date.</td></tr>
+      <tr><td>Textes de loi, références, citations</td><td><span class="pill pill-r">Faible</span></td><td>Ouvrez la source : Légifrance, service-public.fr.</td></tr>
+    </table>
+  </div>
+
+  <h3 class="h3">L’hallucination</h3>
+  <p class="txt">Une hallucination est une réponse inventée, donnée sur le même ton qu’une réponse exacte. Rien ne signale l’erreur.</p>
+  <div class="note"><b>Exemple illustratif.</b> Vous demandez les conditions d’une aide. L’assistant répond par un plafond de ressources chiffré, avec le nom d’un décret. Le chiffre est faux et le décret n’existe pas. Si cette réponse part dans un courrier, une personne peut renoncer à un droit.</div>
+
+  <h3 class="h3">Les autres limites</h3>
+  <div class="cards c2">
+    <div class="card"><h4>Les biais</h4><p>Demandez « le profil d’un jeune en difficulté » et la réponse s’appuie sur des clichés. Relisez les descriptions de personnes et de familles, et reformulez de façon factuelle.</p></div>
+    <div class="card"><h4>L’excès d’accord</h4><p>Certains modèles tendent à valider ce que vous avancez. Demandez-lui explicitement ce qui irait à l’encontre de votre hypothèse.</p></div>
+    <div class="card"><h4>Les connaissances datées</h4><p>Les règles, les aides et les organisations changent. Sans recherche sur le web, l’outil ne connaît pas l’actualité, et avec elle, les sources affichées restent à contrôler.</p></div>
+    <div class="card"><h4>La dépendance</h4><p>À force de déléguer l’écriture, le regard critique s’émousse. Gardez une part de travail sans IA, en particulier pour les écrits sur les personnes.</p></div>
+  </div>
+  <p class="txt muted">Chaque demande consomme de l’énergie. Réservez l’IA aux tâches qui en valent la peine.</p>
+
+  <h3 class="h3">Quand ne pas utiliser l’IA</h3>
+  <ul class="dots">
+    <li>Quand la demande exige des informations sur une personne accompagnée.</li>
+    <li>Quand la réponse décide d’un droit, d’une admission, d’une orientation ou d’une sanction.</li>
+    <li>Quand vous ne pourriez pas vérifier le résultat.</li>
+    <li>Quand la personne a besoin d’une présence humaine, par exemple une situation de détresse.</li>
+  </ul>
+</section>
+
+<!-- 4 -->
+<section id="demander" class="sec">
+  <p class="kicker">Partie 4</p>
+  <h2 class="h2">Bien demander</h2>
+  <p class="lead">La qualité de la réponse dépend surtout de la qualité de la demande. Une demande efficace tient en cinq éléments.</p>
+  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">
+    <div class="card"><h4 style="color:var(--accent)">Rôle</h4><p>Qui doit écrire ? Un rédacteur de documents accessibles, un éducateur, un relecteur.</p></div>
+    <div class="card"><h4 style="color:var(--accent)">Contexte</h4><p>Pour qui et pourquoi, sans décrire une personne accompagnée.</p></div>
+    <div class="card"><h4 style="color:var(--accent)">Tâche</h4><p>Reformuler, résumer, proposer, critiquer, comparer.</p></div>
+    <div class="card"><h4 style="color:var(--accent)">Format</h4><p>Longueur, structure, taille des phrases, niveau de langage.</p></div>
+    <div class="card"><h4 style="color:var(--accent)">Contraintes</h4><p>Ton, ce qu’il ne faut pas ajouter, texte à respecter.</p></div>
+  </div>
+  <div class="cards c2">
+    <div class="card"><span class="pill pill-r">Demande vague</span><p class="mt-3">Explique le règlement aux jeunes.</p></div>
+    <div class="card"><span class="pill pill-g">Demande précise</span><p class="mt-3">Tu es rédacteur de documents accessibles. Reformule ces cinq règles de vie collective pour des adolescents de 12 à 17 ans aux niveaux de lecture variés. Phrases de 12 mots maximum, ton respectueux, n’ajoute aucune règle.</p></div>
+  </div>
+
+  <h3 class="h3">Six techniques qui améliorent les réponses</h3>
+  <div class="cards">
+    <div class="card"><h4>Donner un exemple</h4><p>Collez un court texte dans le style voulu et demandez d’en reprendre le ton.</p></div>
+    <div class="card"><h4>Faire poser des questions</h4><p>« Avant de répondre, pose-moi les questions dont tu as besoin. » L’outil cadre la demande avec vous.</p></div>
+    <div class="card"><h4>Découper en étapes</h4><p>Pour une tâche longue, avancez pas à pas plutôt que tout demander d’un coup.</p></div>
+    <div class="card"><h4>Fixer le public</h4><p>« Pour des parents qui lisent peu le français. » Le niveau de langage suit.</p></div>
+    <div class="card"><h4>Demander des variantes</h4><p>Trois versions avec des tons différents, puis gardez la meilleure.</p></div>
+    <div class="card"><h4>Faire critiquer</h4><p>« Quels passages seraient difficiles à comprendre ? Que ferait un lecteur sceptique ? »</p></div>
+  </div>
+
+  <h3 class="h3">Itérer, puis vérifier</h3>
+  <p class="txt">Le premier résultat est rarement le bon. Traitez l’échange comme une discussion avec un collègue : on précise, on corrige, on demande une autre version. Avant de diffuser, suivez trois gestes.</p>
+  <ul class="ticks">
+    <li>Repérez tout ce qui est factuel : chiffres, dates, noms, références, montants.</li>
+    <li>Contrôlez-le à la source. Demander « es-tu sûr ? » ne vérifie rien, l’outil peut confirmer une erreur.</li>
+    <li>Relisez comme si vous aviez écrit le texte. Votre nom figure dessus, pas celui de l’outil.</li>
+  </ul>
+  <div class="note"><b>Pour un document en « facile à lire et à comprendre ».</b> L’assistant donne un bon premier jet. La version finale se fait relire idéalement par les personnes concernées.</div>
+
+  <h3 class="h3">Huit demandes prêtes à copier</h3>
+  <p class="txt muted">Les parties entre crochets sont à remplacer. Ne collez jamais d’information sur une personne accompagnée, une famille ou un collègue.</p>
+  <div class="cards c2">
+    <div class="prompt"><h4>Adapter un texte en langage simple</h4><pre>Tu es rédacteur de documents accessibles. Reformule le texte ci-dessous en langage simple pour des adultes qui lisent peu. Phrases de 12 mots maximum, une idée par phrase, vocabulaire courant, aucun sigle sans explication. N’ajoute aucune information absente du texte.
+
+Texte : [coller ici un texte général, sans donnée personnelle]</pre><button class="copy" type="button">Copier</button></div>
+    <div class="prompt"><h4>Compte rendu de réunion</h4><pre>À partir des notes ci-dessous, rédige un compte rendu : décisions prises, actions (qui, quoi, pour quand) et points à suivre. Style concis. Si une information manque, écris [à compléter].
+
+Notes (sans aucun nom de personne accompagnée) : [notes]</pre><button class="copy" type="button">Copier</button></div>
+    <div class="prompt"><h4>Trame d’entretien</h4><pre>Propose une trame d’entretien de 30 minutes pour un premier rendez-vous d’accueil dans un service d’accompagnement social. Questions ouvertes, respectueuses, sans jugement, regroupées par thème. Ne propose aucune question intrusive qui ne soit pas nécessaire.</pre><button class="copy" type="button">Copier</button></div>
+    <div class="prompt"><h4>Atelier collectif</h4><pre>Conçois un atelier de 1 h 30 sur [thème] pour un groupe de [nombre] [public, par exemple adolescents de 14 à 17 ans]. Donne : objectifs, matériel, déroulé minuté, variantes si le groupe est peu à l’aise, points de vigilance.</pre><button class="copy" type="button">Copier</button></div>
+    <div class="prompt"><h4>Courrier type</h4><pre>Rédige un modèle de courrier à [destinataire, par exemple un bailleur] pour demander un rendez-vous au sujet de [objet général]. Ton courtois et factuel, 120 mots maximum. Laisse des champs [à compléter] pour toutes les informations personnelles.</pre><button class="copy" type="button">Copier</button></div>
+    <div class="prompt"><h4>Relecture neutre d’un écrit</h4><pre>Relis ce texte comme un lecteur sceptique. Signale les passages ambigus, les jugements de valeur et les formulations stigmatisantes. Propose des reformulations neutres et factuelles.
+
+Texte : [texte sans donnée personnelle]</pre><button class="copy" type="button">Copier</button></div>
+    <div class="prompt"><h4>Note de service</h4><pre>Rédige une note de service de 150 mots maximum annonçant [sujet]. Ton clair et respectueux. Indique ce qui change, à partir de quand et qui contacter. Si une information manque, écris [à compléter].</pre><button class="copy" type="button">Copier</button></div>
+    <div class="prompt"><h4>Synthèse d’un texte officiel</h4><pre>Résume en 10 lignes le texte officiel ci-dessous pour une équipe éducative : ce qui change, pour qui, à partir de quand. Indique les passages sur lesquels tu t’appuies afin que je puisse les vérifier.
+
+Texte : [texte public]</pre><button class="copy" type="button">Copier</button></div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section id="donnees" class="sec">
+  <p class="kicker">Partie 5</p>
+  <h2 class="h2">Données et confidentialité</h2>
+  <p class="lead">Ce que vous écrivez dans un outil d’IA quitte votre poste. Selon l’outil, le texte peut être conservé, consulté par le fournisseur ou réutilisé. Les informations sur les personnes accompagnées sont parmi les plus sensibles qui soient.</p>
+
+  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+    <div class="card"><span class="pill pill-g">Libre</span><p class="mt-3 font-semibold">Règlement de fonctionnement, texte public, question générale, idée d’atelier, modèle de courrier sans donnée.</p><p class="muted">Utilisable dans les outils autorisés.</p></div>
+    <div class="card"><span class="pill pill-o">Prudence</span><p class="mt-3 font-semibold">Note interne sans donnée individuelle, compte rendu d’équipe vraiment anonymisé, document de travail de la structure.</p><p class="muted">Outil validé uniquement. Relisez pour retirer tout indice d’identification.</p></div>
+    <div class="card"><span class="pill pill-r">Interdit</span><p class="mt-3 font-semibold">Projet personnalisé, évaluation sociale, rapport, dossier éducatif ou social, éléments sur un enfant, une famille, une mesure de protection, un collègue, une situation financière ou de logement.</p><p class="muted">Ne jamais saisir hors outil prévu pour ces données.</p></div>
+  </div>
+
+  <h3 class="h3">Puis-je saisir ça ?</h3>
+  <p class="txt muted">Choisissez une information et voyez le verdict. Les cas s’appliquent à un assistant d’IA ordinaire, hors outil spécialement prévu pour ces données.</p>
+  <div class="chk"><div class="list" id="chk-list" role="group" aria-label="Exemples d’informations"></div><div class="res" id="chk-res" role="status" aria-live="polite"><p class="muted">Sélectionnez un exemple.</p></div></div>
+
+  <h3 class="h3">Anonymiser vraiment</h3>
+  <p class="txt">Retirer le nom ne suffit pas. Un âge, un lieu, une date, un parcours et une situation familiale peuvent suffire à reconnaître une personne, surtout dans une petite commune ou un petit établissement.</p>
+  <div class="cards">
+    <div class="card"><h4>Retirer</h4><p>Nom, prénom, date de naissance, adresse, numéros, photos, voix, nom de l’établissement.</p></div>
+    <div class="card"><h4>Généraliser</h4><p>« 14 ans » devient « un adolescent ». « Une commune de 800 habitants » devient « une commune rurale ».</p></div>
+    <div class="card"><h4>Remplacer</h4><p>Utilisez des codes neutres : « la personne A ». Gardez la correspondance hors de l’outil.</p></div>
+    <div class="card"><h4>Tester</h4><p>« Un collègue reconnaîtrait-il la personne ? » Si oui, l’information n’est pas anonyme.</p></div>
+  </div>
+  <div class="note note-w"><b>Le test du mail transférable.</b> Pourriez-vous envoyer ce texte dans un mail que n’importe qui pourrait transférer, sans risque pour la personne ? Sinon, ne le saisissez pas dans un assistant.</div>
+
+  <h3 class="h3">Avant d’envoyer une demande</h3>
+  <ul class="ticks">
+    <li>L’outil est-il celui que ma structure a validé, avec mon compte professionnel ?</li>
+    <li>Mon texte contient-il un nom, une date, un lieu ou un détail qui identifie quelqu’un ?</li>
+    <li>Ai-je joint un fichier, une capture d’écran ou une photo ? Ces éléments suivent les mêmes règles.</li>
+    <li>Ai-je vérifié les réglages de confidentialité, notamment la réutilisation de mes échanges ?</li>
+    <li>Saurais-je expliquer à la personne concernée ce que j’ai envoyé et pourquoi ?</li>
+  </ul>
+
+  <h3 class="h3">Cas particulier : enregistrer et transcrire</h3>
+  <p class="txt">Enregistrer un entretien ou une réunion pour le transcrire avec une application d’IA revient à envoyer la voix et les propos d’une personne à un tiers. Cela exige un outil validé par la structure, une information claire des personnes et leur accord. Sans cela, ne le faites pas.</p>
+
+  <h3 class="h3">Si une erreur est commise</h3>
+  <p class="txt">Une saisie de trop arrive. L’important est la réaction.</p>
+  <ol class="tl">
+    <li><b class="t">1. Arrêtez</b>N’envoyez pas d’autre élément et ne cherchez pas à « réparer » en saisissant autre chose.</li>
+    <li><b class="t">2. Prévenez immédiatement</b>Informez votre direction. Plus la réaction est rapide, plus les conséquences peuvent être limitées.</li>
+    <li><b class="t">3. Notez les faits</b>Quel outil, quel contenu, quand, quelles personnes sont concernées.</li>
+    <li><b class="t">4. Laissez la structure décider</b>Elle évalue le risque et, le cas échéant, notifie la CNIL dans un délai de 72 heures et informe les personnes.</li>
+  </ol>
+</section>
+
+<!-- 6 -->
+<section id="cadre" class="sec">
+  <p class="kicker">Partie 6</p>
+  <h2 class="h2">Cadre juridique et éthique</h2>
+  <p class="lead">Quatre ensembles de règles s’appliquent à votre usage : la protection des données, le secret professionnel, les droits des usagers et le règlement européen sur l’IA. Votre interlocuteur sur place : votre direction.</p>
+
+  <h3 class="h3" style="margin-top:2rem">La protection des données (RGPD)</h3>
+  <div class="cards">
+    <div class="card"><h4>Finalité</h4><p>Une donnée est collectée pour un but précis, et pas pour un autre.</p></div>
+    <div class="card"><h4>Minimisation</h4><p>On ne traite que ce qui est nécessaire.</p></div>
+    <div class="card"><h4>Exactitude</h4><p>Les informations doivent être justes et à jour.</p></div>
+    <div class="card"><h4>Durée limitée</h4><p>On ne conserve pas les données sans limite.</p></div>
+    <div class="card"><h4>Sécurité</h4><p>Accès limités, outils maîtrisés, traçabilité.</p></div>
+    <div class="card"><h4>Transparence</h4><p>Les personnes savent ce qui est fait de leurs données.</p></div>
+  </div>
+  <ul class="dots">
+    <li><b>Droits des personnes.</b> Les personnes accompagnées, leurs familles et leurs représentants disposent d’un droit d’information, d’accès, de rectification et, dans certains cas, d’opposition et d’effacement.</li>
+    <li><b>Décision automatisée.</b> En principe, une personne ne peut pas faire l’objet d’une décision fondée exclusivement sur un traitement automatisé lorsqu’elle produit des effets importants pour elle. Un humain doit décider.</li>
+    <li><b>Nouvel outil, nouveau traitement.</b> Avant de déployer un outil qui traite des données personnelles, la structure vérifie sa conformité et réalise si besoin une analyse d’impact.</li>
+  </ul>
+
+  <h3 class="h3">Le secret professionnel et le partage d’informations</h3>
+  <p class="txt">Les professionnels du social sont tenus au secret dans les conditions prévues par la loi. Révéler une information à caractère secret est sanctionné par le Code pénal (article 226-13). Le Code de l’action sociale et des familles encadre le partage d’informations entre professionnels : il se limite à ce qui est strictement nécessaire à l’accompagnement.</p>
+  <div class="note note-w"><b>Conséquence pour l’IA.</b> Saisir une information sur une personne dans un outil externe n’est pas un partage entre professionnels. C’est une sortie de l’information hors du cadre prévu.</div>
+
+  <h3 class="h3">Les droits des usagers</h3>
+  <p class="txt">La loi du 2 janvier 2002 et le Code de l’action sociale et des familles (article L311-3) garantissent notamment : le respect de la dignité, de l’intégrité, de la vie privée, de l’intimité et de la sécurité ; la confidentialité des informations ; l’accès à l’information ; la participation à son projet d’accompagnement. Un usage d’IA ne doit entamer aucun de ces droits.</p>
+
+  <h3 class="h3">Droit d’auteur et responsabilité</h3>
+  <ul class="dots">
+    <li>Un texte ou une image générés peuvent ressembler à des œuvres existantes. Vérifiez avant une publication externe.</li>
+    <li>Ne collez pas de contenus protégés (articles, livres, documents de tiers) dans un outil sans savoir si vous en avez le droit.</li>
+    <li>Le statut juridique des contenus générés reste débattu. Pour un usage important, demandez l’avis de votre direction ou d’un juriste.</li>
+    <li>Le contenu que vous diffusez engage la structure et vous-même. L’outil n’est pas responsable.</li>
+  </ul>
+
+  <h3 class="h3">Le règlement européen sur l’IA (AI Act)</h3>
+  <p class="txt">Le règlement (UE) 2024/1689 classe les usages selon leur niveau de risque et s’applique par étapes.</p>
+  <div class="tbl">
+    <table>
+      <tr><th>Niveau</th><th>Ce que cela vise dans votre secteur</th><th>Conséquence</th></tr>
+      <tr><td><span class="pill pill-r">Interdit</span></td><td>Exploiter les vulnérabilités liées à l’âge, au handicap ou à la situation sociale. Reconnaître les émotions au travail ou en milieu d’éducation, sauf raisons médicales ou de sécurité.</td><td>Interdit.</td></tr>
+      <tr><td><span class="pill pill-o">Haut risque</span></td><td>Outils qui évaluent l’accès à une prestation ou à un service essentiel, ou qui trient des candidatures.</td><td>Exigences strictes : gestion des risques, supervision humaine, documentation.</td></tr>
+      <tr><td><span class="pill pill-a">Transparence</span></td><td>Chatbot d’accueil, contenus générés, deepfakes.</td><td>Informer qu’il s’agit d’une IA, signaler les contenus générés.</td></tr>
+      <tr><td><span class="pill pill-g">Minimal</span></td><td>Aide à la rédaction, filtre anti-spam.</td><td>Pas d’obligation spécifique.</td></tr>
+    </table>
+  </div>
+  <ol class="tl">
+    <li><b class="t">2 février 2025</b>Interdictions, et obligation pour les structures de prendre des mesures pour développer la maîtrise de l’IA de leur personnel (article 4). Cette formation y contribue.</li>
+    <li><b class="t">2 août 2026</b>Application générale, dont la transparence de l’article 50 : chatbots identifiés comme tels, contenus générés signalés.</li>
+    <li class="late"><b class="t">2 décembre 2027</b>Exigences sur les systèmes à haut risque de l’annexe III, reportées par le règlement 2026/1744, en vigueur depuis le 27 juillet 2026.</li>
+    <li class="late"><b class="t">2 août 2028</b>Systèmes à haut risque intégrés à des produits réglementés (annexe I).</li>
+  </ol>
+  <p class="txt muted">Les amendes maximales atteignent 35 millions d’euros ou 7 % du chiffre d’affaires mondial pour les pratiques interdites. L’article 4 ne fixe pas d’amende propre : chaque État membre définit son régime de sanctions. La rédaction de cet article a été modifiée en juillet 2026 sans supprimer l’obligation de prendre des mesures adaptées, et les commentaires ne sont pas tous alignés.</p>
+
+  <h3 class="h3">Cinq principes éthiques pour votre pratique</h3>
+  <div class="cards">
+    <div class="card"><h4>Dignité</h4><p>Respecter la personne, sa vie privée et son intimité.</p></div>
+    <div class="card"><h4>Pouvoir d’agir</h4><p>La personne participe à son accompagnement et peut refuser un usage d’IA qui la concerne.</p></div>
+    <div class="card"><h4>Égalité</h4><p>Ne pas discriminer. Se méfier des classements automatiques et des clichés.</p></div>
+    <div class="card"><h4>Transparence</h4><p>Dire quand une IA intervient et ce qu’elle fait.</p></div>
+    <div class="card"><h4>Responsabilité humaine</h4><p>Un professionnel décide, signe et peut expliquer.</p></div>
+  </div>
+  <p class="txt muted">Un autre point de vigilance : l’accès aux droits ne doit pas dépendre d’un outil numérique. Une personne éloignée du numérique doit toujours pouvoir s’adresser à quelqu’un.</p>
+  <p class="txt muted">Les recommandations de la Haute Autorité de santé résument le bon usage en quatre verbes : apprendre, vérifier, estimer, communiquer. Elles ont été écrites pour la santé, et la logique vaut pour le social.</p>
+</section>
+
+<!-- 7 -->
+<section id="usages" class="sec">
+  <p class="kicker">Partie 7</p>
+  <h2 class="h2">Cas d’usage par fonction</h2>
+  <p class="lead">Les bons usages sont fréquents, sans donnée sur une personne et faciles à vérifier.</p>
+  <div class="cards c2">
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span><h4>Équipes éducatives</h4>
+      <ul><li>Adapter une information générale ou le règlement en langage simple.</li><li>Préparer une activité, un atelier ou une sortie.</li><li>Créer des supports de jeux, de médiation ou de soutien scolaire.</li><li>Reformuler un écrit général à partir de notes sans donnée individuelle.</li><li>Préparer une réunion d’équipe ou une séance d’analyse de pratique sur un thème.</li></ul>
+      <p class="muted"><b style="color:var(--warn)">Vigilance.</b> Les écrits sur une personne se rédigent dans les outils validés du dossier usager.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><h4>Accompagnement social</h4>
+      <ul><li>Expliquer une démarche administrative en langage simple, à partir d’un texte officiel.</li><li>Préparer une trame d’entretien avec des questions générales.</li><li>Rédiger un modèle de courrier à adapter ensuite à la main.</li><li>Préparer une fiche pratique sur un dispositif, à vérifier à la source.</li><li>Traduire une information générale pour des personnes qui lisent peu le français.</li></ul>
+      <p class="muted"><b style="color:var(--warn)">Vigilance.</b> Jamais de situation individuelle. Droits et montants se vérifient sur le site officiel.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><h4>Secrétariat et accueil</h4>
+      <ul><li>Mettre en forme un compte rendu sans donnée individuelle.</li><li>Préparer des courriers types et des trames de mails.</li><li>Réorganiser un planning ou un tableau de suivi.</li><li>Préparer la foire aux questions de l’accueil.</li><li>Corriger et harmoniser des documents internes.</li></ul>
+      <p class="muted"><b style="color:var(--warn)">Vigilance.</b> Relisez tout courrier destiné à une famille. Un chatbot d’accueil doit se présenter comme une IA.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span><h4>Qualité et direction</h4>
+      <ul><li>Préparer la trame d’une évaluation interne ou d’un plan d’amélioration.</li><li>Synthétiser un texte réglementaire public pour l’équipe.</li><li>Rédiger une note de service ou un compte rendu de conseil.</li><li>Préparer un appel à projets à partir de vos idées et de données publiques.</li><li>Construire une trame d’indicateurs.</li></ul>
+      <p class="muted"><b style="color:var(--warn)">Vigilance.</b> Contrôlez les textes de loi sur Légifrance. Aucun élément de dossier de personne.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><h4>Ressources humaines</h4>
+      <ul><li>Rédiger une fiche de poste ou une offre d’emploi inclusive.</li><li>Préparer un plan d’accueil pour un nouveau salarié.</li><li>Préparer un plan de formation à partir des besoins de l’équipe, sans données nominatives.</li><li>Reformuler une note interne.</li></ul>
+      <p class="muted"><b style="color:var(--warn)">Vigilance.</b> Trier des candidatures ou évaluer un salarié est un usage à haut risque : une personne décide.</p></article>
+    <article class="card"><span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg></span><h4>Protection de l’enfance</h4>
+      <ul><li>Préparer des animations, des jeux et des supports de groupe.</li><li>Adapter le livret d’accueil en langage simple pour des adolescents.</li><li>Préparer un temps d’échange d’équipe sur une thématique générale.</li><li>Créer des supports de prévention adaptés à l’âge du public.</li></ul>
+      <p class="muted"><b style="color:var(--warn)">Vigilance.</b> Jamais d’élément sur un enfant, sa famille ou une mesure. Tout écrit qui concerne un enfant est rédigé par un professionnel, dans les outils prévus.</p></article>
+  </div>
+
+  <h3 class="h3">Ce que l’on ne fait pas</h3>
+  <div class="cards c2">
+    <div class="card" style="border-color:var(--bad)"><ul style="list-style:none;padding:0"><li>✕ Saisir ou résumer un dossier, un rapport ou une évaluation individuelle.</li><li>✕ Décider, ou préparer seul, une admission, une aide, une orientation ou une sanction.</li><li>✕ Noter, classer ou prédire le comportement de personnes.</li></ul></div>
+    <div class="card" style="border-color:var(--bad)"><ul style="list-style:none;padding:0"><li>✕ Créer des témoignages, des photos ou des voix de personnes réelles ou fictives présentées comme réelles.</li><li>✕ Laisser un chatbot répondre seul à une personne en détresse.</li><li>✕ Analyser les émotions de personnes à partir de leur voix ou de leur visage.</li></ul></div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section id="situations" class="sec">
+  <p class="kicker">Partie 8</p>
+  <h2 class="h2">Mises en situation</h2>
+  <p class="lead">Sept situations de terrain. Pour chacune, réfléchissez à ce que vous feriez, puis ouvrez la bonne pratique.</p>
+
+  <details class="qa"><summary>1. Un collègue pressé propose de coller l’évaluation d’un jeune dans un assistant pour en faire la synthèse</summary><div class="ans">
+    <p><b>Bonne pratique.</b> Ne pas le faire. Une évaluation contient des informations sensibles et identifiantes, protégées par le secret professionnel. Un assistant grand public n’est pas l’outil prévu pour ce dossier.</p>
+    <p>Proposez de rédiger la synthèse vous-même, ou de passer par l’outil validé du dossier usager. Si l’envoi a déjà eu lieu, prévenez la direction sans attendre.</p></div></details>
+
+  <details class="qa"><summary>2. L’assistant indique qu’un plafond de ressources précis ouvre droit à une aide</summary><div class="ans">
+    <p><b>Bonne pratique.</b> Ne pas relayer ce chiffre. Les droits, montants et délais font partie des contenus les moins fiables. Vérifiez sur le site de l’organisme ou sur service-public.fr, notez la date de la vérification, puis utilisez l’assistant seulement pour reformuler le texte confirmé.</p></div></details>
+
+  <details class="qa"><summary>3. Le livret d’accueil est trop dense pour les personnes accompagnées</summary><div class="ans">
+    <p><b>Bonne pratique.</b> C’est un bon usage. Utilisez la demande « Adapter un texte en langage simple » avec le texte général du livret. Comparez le résultat à l’original pour vérifier qu’aucune information n’a été ajoutée ou supprimée, faites-le valider par la direction et testez-le auprès de quelques personnes concernées.</p></div></details>
+
+  <details class="qa"><summary>4. Un jeune vous montre qu’il utilise un assistant pour écrire un courrier à son bailleur</summary><div class="ans">
+    <p><b>Bonne pratique.</b> Ne pas interdire, accompagner. Parlez de ce qu’il envoie à l’outil : nom, adresse et situation personnelle sont des données. Relisez le courrier avec lui, vérifiez les faits et les droits cités, et rappelez qu’un assistant ne remplace pas un interlocuteur humain, en particulier en cas de détresse. Si une situation de danger apparaît, appliquez les procédures habituelles de la structure.</p></div></details>
+
+  <details class="qa"><summary>5. La direction souhaite un chatbot sur le site pour orienter les familles</summary><div class="ans">
+    <p><b>Bonne pratique.</b> Un tel outil relève de la transparence de l’AI Act : il doit indiquer qu’il s’agit d’une IA. Limitez-le à des informations générales (horaires, contacts, démarches), prévoyez toujours un accès à une personne, empêchez la saisie d’informations sensibles, testez les réponses avant l’ouverture et associez la direction dès le départ et vérifiez la conformité avant l’ouverture.</p></div></details>
+
+  <details class="qa"><summary>6. Un outil propose de classer automatiquement des demandes d’hébergement par priorité</summary><div class="ans">
+    <p><b>Bonne pratique.</b> C’est un usage à haut risque : il touche l’accès à un service essentiel. Une décision exclusivement automatisée est en principe interdite par le RGPD. Un humain doit décider, pouvoir expliquer ses critères et contrôler les biais. Ne déployez rien sans analyse d’impact préalable.</p></div></details>
+
+  <details class="qa"><summary>7. Un bénévole propose d’enregistrer les entretiens et de les faire transcrire par une application</summary><div class="ans">
+    <p><b>Bonne pratique.</b> Refuser en l’état. L’enregistrement et la transcription envoient la voix et les propos de personnes à un tiers. Il faudrait un outil validé par la structure, une information claire et l’accord des personnes. Proposez plutôt une prise de notes, qui reste sous votre responsabilité.</p></div></details>
+</section>
+
+<!-- 10 -->
+<section id="retenir" class="sec">
+  <p class="kicker">Partie 9</p>
+  <h2 class="h2">À retenir et plan d’action</h2>
+  <h3 class="h3" style="margin-top:1.5rem">Sept réflexes</h3>
+  <ul class="ticks" style="font-size:1.08rem">
+    <li>Je donne le contexte, le public et le format, sans jamais décrire une personne accompagnée.</li>
+    <li>Je vérifie chaque fait, chiffre, droit ou référence à la source avant de diffuser.</li>
+    <li>Je ne saisis que ce que je pourrais envoyer dans un mail transférable sans risque.</li>
+    <li>Je me méfie d’une anonymisation qui se limite à retirer un nom.</li>
+    <li>Les décisions qui engagent une personne restent humaines et collectives.</li>
+    <li>J’informe les personnes concernées d’un usage d’IA.</li>
+    <li>Je prévois tout de suite, en cas d’erreur de saisie, de prévenir la direction.</li>
+  </ul>
+  <h3 class="h3">Votre plan d’action en trois questions</h3>
+  <div class="cards" style="grid-template-columns:repeat(auto-fit,minmax(240px,1fr))">
+    <div class="card"><h4 style="color:var(--accent)">Quelle tâche ?</h4><p>Choisissez une seule tâche fréquente, sans donnée sur une personne et facile à vérifier, à tester cette semaine.</p></div>
+    <div class="card"><h4 style="color:var(--accent)">Quel outil ?</h4><p>Celui que votre structure a validé. S’il n’y en a pas, demandez à votre direction avant de commencer.</p></div>
+    <div class="card"><h4 style="color:var(--accent)">Comment vérifier ?</h4><p>Décidez à l’avance quelles informations vous contrôlerez et à quelle source.</p></div>
+  </div>
+  <div class="note"><b>Une question sur les outils autorisés ?</b> Rapprochez-vous de votre direction ou de votre responsable d’équipe. Votre structure doit pouvoir justifier les actions de formation menées : pensez à signaler votre participation.</div>
+</section>
+
+<!-- 11 -->
+<section id="ressources" class="sec">
+  <p class="kicker">Partie 10 · référence</p>
+  <h2 class="h2">Glossaire, FAQ et ressources</h2>
+
+  <h3 class="h3" style="margin-top:2rem">Glossaire</h3>
+  <dl class="gl">
+    <div><dt>AIPD</dt><dd>Analyse d’impact relative à la protection des données. Elle évalue les risques d’un traitement avant son lancement.</dd></div>
+    <div><dt>AI Act</dt><dd>Règlement européen sur l’intelligence artificielle, qui classe les usages par niveau de risque.</dd></div>
+    <div><dt>Anonymisation</dt><dd>Opération qui rend impossible l’identification d’une personne. Retirer le nom seul ne suffit pas.</dd></div>
+    <div><dt>Biais</dt><dd>Tendance d’un système à reproduire des déséquilibres ou des stéréotypes présents dans ses données.</dd></div>
+    <div><dt>Contexte</dt><dd>Ensemble des informations que l’assistant voit : votre demande, l’historique de la conversation et les documents joints.</dd></div>
+    <div><dt>Décision automatisée</dt><dd>Décision prise sans intervention humaine, par exemple le classement automatique d’une demande.</dd></div>
+    <div><dt>Donnée personnelle</dt><dd>Toute information qui permet d’identifier une personne, directement ou par recoupement.</dd></div>
+    <div><dt>FALC</dt><dd>Facile à lire et à comprendre. Méthode de rédaction accessible, idéalement relue par des personnes concernées.</dd></div>
+    <div><dt>Hallucination</dt><dd>Réponse inventée et présentée comme exacte.</dd></div>
+    <div><dt>IA générative</dt><dd>Système qui crée du texte, des images, du son ou du code à partir d’une demande.</dd></div>
+    <div><dt>Modèle de langage</dt><dd>Programme entraîné sur de grandes quantités de textes pour prédire la suite d’un texte.</dd></div>
+    <div><dt>Prompt</dt><dd>La demande que vous adressez à l’assistant.</dd></div>
+    <div><dt>Pseudonymisation</dt><dd>Remplacement du nom par un code. Les informations restent identifiantes par recoupement, la personne n’est donc pas anonyme.</dd></div>
+    <div><dt>RGPD</dt><dd>Règlement européen sur la protection des données personnelles.</dd></div>
+    <div><dt>Token</dt><dd>Morceau de mot servant d’unité de texte à un modèle de langage.</dd></div>
+  </dl>
+
+  <h3 class="h3">Questions fréquentes</h3>
+  <details class="qa"><summary>Puis-je utiliser mon compte personnel d’un assistant pour le travail ?</summary><div class="ans"><p>Non, sauf accord de votre structure. Les conditions d’usage des données d’un compte personnel ne sont pas celles d’un outil validé, et votre structure ne maîtrise ni l’outil ni ce qu’il conserve.</p></div></details>
+  <details class="qa"><summary>L’IA peut-elle rédiger mes rapports sur les personnes ?</summary><div class="ans"><p>Non. Un rapport contient des données sensibles et engage votre responsabilité professionnelle. Il se rédige vous-même, dans les outils prévus. L’IA peut au mieux aider sur des formulations générales, sans aucun élément de la situation.</p></div></details>
+  <details class="qa"><summary>Faut-il informer les personnes accompagnées ?</summary><div class="ans"><p>Oui, quand un usage d’IA les concerne. Un chatbot doit se présenter comme tel. Pour les usages internes sans donnée sur elles, une information générale dans le livret d’accueil est recommandée.</p></div></details>
+  <details class="qa"><summary>Puis-je remplacer le nom par un prénom fictif ?</summary><div class="ans"><p>Cela ne suffit pas. L’âge, le lieu, le parcours et la situation peuvent suffire à identifier la personne. Préférez ne saisir aucun élément de situation, ou généraliser fortement.</p></div></details>
+  <details class="qa"><summary>Les contenus générés sont-ils libres de droits ?</summary><div class="ans"><p>La question est encore débattue. Un contenu peut ressembler à une œuvre existante. Pour une publication externe, vérifiez et demandez l’avis de votre direction ou d’un juriste.</p></div></details>
+  <details class="qa"><summary>La formation à l’IA est-elle obligatoire ?</summary><div class="ans"><p>L’article 4 de l’AI Act demande aux structures qui utilisent l’IA de prendre des mesures pour développer la maîtrise de l’IA de leur personnel. Il ne prescrit ni format, ni durée, ni certification. Il est utile de garder une trace des actions menées.</p></div></details>
+  <details class="qa"><summary>Vais-je être remplacé par l’IA ?</summary><div class="ans"><p>L’IA prend en charge certaines tâches d’écriture. Elle ne remplace ni la relation, ni le discernement, ni la responsabilité d’un professionnel. Le métier évolue : savoir l’utiliser avec esprit critique en fait partie.</p></div></details>
+  <details class="qa"><summary>À qui poser mes questions ?</summary><div class="ans"><p>À votre direction ou à votre responsable d’équipe. Pour un doute sur une saisie, demandez avant d’envoyer.</p></div></details>
+
+  <h3 class="h3">Ressources officielles</h3>
+  <ul class="dots">
+    <li><a class="underline" style="color:var(--accent)" target="_blank" rel="noopener" href="https://www.cnil.fr/fr/intelligence-artificielle">CNIL : intelligence artificielle</a></li>
+    <li><a class="underline" style="color:var(--accent)" target="_blank" rel="noopener" href="https://www.has-sante.fr/upload/docs/application/pdf/2025-10/dir2/premieres_clefs_dusage_de_lia_generative_en_sante_-_guide.pdf">Haute Autorité de santé : premières clefs d’usage de l’IA générative en santé (PDF)</a></li>
+    <li><a class="underline" style="color:var(--accent)" target="_blank" rel="noopener" href="https://www.cnil.fr/sites/default/files/2026-03/guide_has_cnil_recommandations_ia.pdf">Guide CNIL et HAS sur le bon usage des systèmes d’IA (PDF)</a></li>
+    <li><a class="underline" style="color:var(--accent)" target="_blank" rel="noopener" href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Règlement (UE) 2024/1689 sur l’intelligence artificielle</a></li>
+    <li><a class="underline" style="color:var(--accent)" target="_blank" rel="noopener" href="https://www.legifrance.gouv.fr">Légifrance</a></li>
+    <li><a class="underline" style="color:var(--accent)" target="_blank" rel="noopener" href="https://www.service-public.fr">Service-public.fr</a></li>
+  </ul>
+</section>
+
+</main>
+</div>
+</div>
+
+<button id="top" type="button" aria-label="Retour en haut de page">↑</button>
+<footer class="border-t border-line py-10">
+  <div class="mx-auto flex max-w-6xl flex-col gap-2 px-4 text-sm text-muted">
+    <p>Sources : recommandations de la Haute Autorité de santé et de la CNIL sur l’IA ; règlement (UE) 2024/1689 modifié par le règlement (UE) 2026/1744 ; RGPD. Contenu d’information, à valider par votre direction ou un juriste.</p>
+    <p><a class="back" href="./"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>Retour à l’accueil des parcours</a></p>
+    <p class="font-semibold text-ink">Crédits : Jérémy TURAZZI</p>
+    <p>Un outil d’intelligence artificielle a aidé au développement de ce parcours.</p>
+    <p>Version du 01/10/2026</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.prompt .copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var pre=b.parentElement.querySelector('pre'),txt=pre.textContent;
+    var done=function(){b.textContent='Copié';setTimeout(function(){b.textContent='Copier'},1800)};
+    var fb=function(){var r=document.createRange();r.selectNodeContents(pre);var s=window.getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Sélectionné : Ctrl+C'};
+    try{navigator.clipboard.writeText(txt).then(done,fb)}catch(e){fb()}
+  });
+});
+document.querySelectorAll('header details a').forEach(function(a){
+  a.addEventListener('click',function(){var d=a.closest('details');if(d)d.open=false});
+});
+(function(){
+  var links=[].slice.call(document.querySelectorAll('aside .sidenav a'));
+  if(!links.length||!('IntersectionObserver' in window))return;
+  var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(e.isIntersecting){
+        links.forEach(function(l){l.removeAttribute('aria-current')});
+        var a=map[e.target.id];if(a)a.setAttribute('aria-current','true');
+      }
+    });
+  },{rootMargin:'-20% 0px -70% 0px'});
+  document.querySelectorAll('main section.sec').forEach(function(s){io.observe(s)});
+})();
+
+(function(){
+  var secs=[].slice.call(document.querySelectorAll('main section.sec'));
+  var nm=function(s){return s.querySelector('h2').textContent};
+  var num=function(i){return (i+1)+'. '};
+  secs.forEach(function(s,i){
+    var d=document.createElement('nav');d.className='pager';d.setAttribute('aria-label','Navigation entre les parties');
+    var h='';
+    if(i>0)h+='<a href="#'+secs[i-1].id+'"><small>Partie précédente</small><b>← '+num(i-1)+nm(secs[i-1])+'</b></a>';
+    if(i<secs.length-1)h+='<a class="nx" href="#'+secs[i+1].id+'"><small>Partie suivante</small><b>'+num(i+1)+nm(secs[i+1])+' →</b></a>';
+    d.innerHTML=h;s.appendChild(d);
+  });
+  var rp=document.getElementById('rp'),tp=document.getElementById('top');
+  var upd=function(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    rp.style.width=(h>0?Math.min(100,window.scrollY/h*100):0)+'%';
+    tp.classList.toggle('on',window.scrollY>800);
+  };
+  window.addEventListener('scroll',upd,{passive:true});upd();
+  tp.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+})();
+
+(function(){
+  var keys={programme:'Une formation pour toutes les fonctions, sans prérequis.',comprendre:'L’IA écrit un texte plausible : elle prédit, elle ne sait pas.',limites:'Plus l’enjeu est élevé, plus on vérifie.',demander:'Contexte, tâche, format : une bonne demande donne une bonne base de travail.',donnees:'Aucune information sur une personne accompagnée dans un outil non prévu.',cadre:'Secret professionnel, RGPD, AI Act : un humain décide et en répond.',usages:'Commencez par des tâches générales, fréquentes et faciles à vérifier.',situations:'Entraînez votre réflexe sur des cas de terrain.',retenir:'Sept réflexes et une tâche à tester cette semaine.',ressources:'Définitions, réponses rapides et sources officielles.'};
+  var secs=[].slice.call(document.querySelectorAll('main section.sec'));
+  secs.forEach(function(s){
+    var k=keys[s.id];if(!k)return;
+    var p=document.createElement('p');p.className='key';p.textContent='En une phrase : '+k;
+    s.querySelector('h2').insertAdjacentElement('afterend',p);
+  });
+  var KEY='ia-social-lu',read={};
+  try{read=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  var save=function(){try{localStorage.setItem(KEY,JSON.stringify(read))}catch(e){}};
+  var paint=function(){
+    var n=0;
+    secs.forEach(function(s){
+      var r=!!read[s.id];if(r)n++;
+      var b=s.querySelector('.readbtn');
+      if(b){b.setAttribute('aria-pressed',String(r));b.querySelector('.lbl').textContent=r?'Partie lue':'Marquer cette partie comme lue'}
+      document.querySelectorAll('.sidenav a[href="#'+s.id+'"]').forEach(function(a){a.classList.toggle('read',r)});
+    });
+    var c=document.getElementById('readn');if(c)c.textContent=n+'/'+secs.length;var h=document.getElementById('readh');if(h)h.textContent=n+'/'+secs.length;
+  };
+  secs.forEach(function(s){
+    var b=document.createElement('button');b.type='button';b.className='readbtn';
+    b.innerHTML='<span class="box" aria-hidden="true"></span><span class="lbl"></span>';
+    b.addEventListener('click',function(){if(read[s.id])delete read[s.id];else read[s.id]=1;save();paint()});
+    var pg=s.querySelector('.pager');s.insertBefore(b,pg);
+  });
+  paint();
+  var items=[
+    ['Le règlement de fonctionnement de la structure','g','Texte général, sans donnée sur une personne. Utilisable dans un outil autorisé.'],
+    ['Un texte de loi trouvé sur Légifrance','g','Contenu public. Demandez une reformulation, puis contrôlez le sens à la source.'],
+    ['Mon idée d’atelier sur la gestion des émotions','g','Aucune donnée personnelle. Vous restez responsable du contenu final.'],
+    ['Un modèle de courrier avec des champs [à compléter]','g','Les informations personnelles se remplissent à la main, hors de l’outil.'],
+    ['Un compte rendu de réunion sans aucune mention d’usager','o','Utilisez un outil validé et relisez pour retirer tout indice d’identification, y compris sur les collègues.'],
+    ['Le projet personnalisé d’un jeune, sans son nom','r','Interdit. Le parcours et la situation identifient souvent la personne. Retirer le nom ne suffit pas.'],
+    ['Le nom d’une famille et son adresse','r','Interdit. Ce sont des données personnelles, protégées par le secret professionnel.'],
+    ['Une photo d’un atelier avec des enfants','r','Interdit. Les images d’enfants sont des données personnelles, avec un risque élevé en cas de fuite.'],
+    ['L’enregistrement audio d’un entretien à transcrire','r','Interdit hors outil prévu. La voix et les propos partent chez un tiers, sans information ni accord des personnes.'],
+    ['Les difficultés d’un collègue en arrêt maladie','r','Interdit. Ce sont des données sensibles sur un salarié.']
+  ];
+  var L=document.getElementById('chk-list'),R=document.getElementById('chk-res');
+  if(L&&R){
+    var lab={g:['Libre','pill-g'],o:['Prudence','pill-o'],r:['Interdit','pill-r']};
+    items.forEach(function(it,i){
+      var b=document.createElement('button');b.type='button';b.textContent=it[0];b.setAttribute('aria-pressed','false');
+      b.addEventListener('click',function(){
+        L.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false')});
+        b.setAttribute('aria-pressed','true');
+        var l=lab[it[1]];
+        R.innerHTML='<span class="pill '+l[1]+'">'+l[0]+'</span><p class="mt-3 font-semibold"></p><p class="mt-2 muted"></p>';
+        R.children[1].textContent=it[0];R.children[2].textContent=it[2];
+      });
+      L.appendChild(b);
+    });
+  }
+})();
+
+(function(){
+  document.querySelectorAll('main section.sec').forEach(function(s,i){
+    var n=document.createElement('span');n.className='secnum';n.setAttribute('aria-hidden','true');
+    n.textContent=(i+1<10?'0':'')+(i+1);s.insertBefore(n,s.firstChild);
+  });
+})();
+</script>
+</body>
+</html>
